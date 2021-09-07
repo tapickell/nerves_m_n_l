@@ -2,6 +2,6 @@
 
 - `brew install pandoc`
 
-- `pandoc -t revealjs -s slides.md -o slides.htm`
+- `pandoc -t revealjs -s slides.md -o slides.html`
 
-- `open -a firefox slides.htm`
+- `open -a firefox slides.html`
