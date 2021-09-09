@@ -21,7 +21,7 @@ Questions to Answer:
 - Where can one run Nerves?
 - Why would one use Nerves?
 - How does one get started with Nerves?
-- When does on acheive Nervana?
+- When does one achieve Nervana?
 
 ---
 
@@ -104,7 +104,7 @@ Add preburn to `ui/mix.exs` aliases
 
 ---
 
-When does one acheive Nervana?
+When does one achieve Nervana?
 
 This used to work :shrug: 
 ```
