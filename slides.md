@@ -21,9 +21,7 @@ Questions to Answer:
 - Where can one run Nerves?
 - Why would one use Nerves?
 - How does one get started with Nerves?
-- Smooth Nerves workflow
-- OTP and Nerves
-- Outside of the BEAM
+- When does on acheive Nervana?
 
 ---
 
@@ -41,7 +39,6 @@ Who is Nerves for?
 - Commercial Applications
 - Industrial Systems
 - Anywhere [Soft Real-Time](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiS35mqo-vyAhXJK80KHX0uCEoQFnoECBMQAw&url=https%3A%2F%2Fusers.ece.cmu.edu%2F~koopman%2Fdes_s99%2Freal_time%2F&usg=AOvVaw1QNi8zB8beppUoK32nDfJN) systems are a good fit
-    
 
 ---
 
@@ -80,11 +77,47 @@ which you will learn more about from Hassan during the next Munch N Learn
 
 ---
 
-How does one get started with [Nerves](https://hexdocs.pm/nerves/installation.html)?
+How does one get started with Nerves?
 
-- 💻 Install deps and Hex pkg
+- 💻 [Install deps and Hex pkg](https://hexdocs.pm/nerves/installation.html)
 - 🌂 [Create Nerves Poncho App](https://github.com/nerves-project/nerves_examples/tree/main/hello_phoenix)
 - 🔥 Burn to SD Card
 - 📡 [FWUP over SSH](https://github.com/nerves-project/nerves_ssh)
-- 💵 Profit 
+- 💵 [Profit](http://nerves.local/)
 
+---
+
+Add preburn to `ui/mix.exs` aliases
+
+```
+  defp aliases do
+    [
+      setup: ["deps.get", "cmd npm install --prefix assets"],
+      preburn: [
+        "cmd npm install --prefix assets --production",
+        "cmd npm run deploy --prefix assets",
+        "phx.digest"
+      ]
+    ]
+  end
+```
+
+---
+
+When does one acheive Nervana?
+
+This used to work :shrug: 
+```
+mix firmware.gen.script 
+/upload.sh nerves.local _build/rpi0_dev/nerves/images/firmware.fw
+```
+
+This still works :meow_party:
+
+```
+cat _build/rpi0_dev/nerves/images/firmware.fw | ssh -s nerves.local fwup
+```
+
+---
+
+![](profit.jpg)
