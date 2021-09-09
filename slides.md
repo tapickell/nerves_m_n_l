@@ -83,21 +83,8 @@ which you will learn more about from Hassan during the next Munch N Learn
 How does one get started with [Nerves](https://hexdocs.pm/nerves/installation.html)?
 
 - 💻 Install deps and Hex pkg
-- 🌂 Create Nerves Poncho App
+- 🌂 [Create Nerves Poncho App](https://github.com/nerves-project/nerves_examples/tree/main/hello_phoenix)
 - 🔥 Burn to SD Card
-- 📡 FWUP over SSH
+- 📡 [FWUP over SSH](https://github.com/nerves-project/nerves_ssh)
 - 💵 Profit 
 
----
-
-Smooth Nerves workflow
-
----
-
-OTP and Nerves
-
----
-
-Outside of the BEAM
-
----
